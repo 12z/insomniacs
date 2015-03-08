@@ -1,0 +1,2 @@
+# ignore artefacts, intermediate files
+*.pyc
