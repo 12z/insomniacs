@@ -1,0 +1,19 @@
+С2. Мини-курс «Скриптовые языки программирования»
+Домашнее задание:
+
+скачайте архив, распакуйте его, выполните 4 шага, которым соответствуют файлы, начинающиеся с цифр "1 - ", "2 - " и т.д.
+добавьте сохранение галочки complete - признака того, что задача выполнена
+раскрасьте выполненные задачи зеленым цветом (проще всего это сделать, добавив CSS класс success на HTML элемент <tr>, в котором отображается задача; класс complete должен добавляться в зависимости от того, отмечена галка complete или нет).
+Запустив тесты с помощью файла '4- run_tests.bat', вы увидите, что два теста падают. Когда домашнее задание будет выполнено, все тесты должны стать зелеными.
+Ссылки на файлы, в которых надо сделать изменения:
+
+applications/todo/static/pages/main/main.html
+applications/todo/static/pages/main/main-controller.js
+applications/todo/models/task.py
+applications/todo/controllers/api.py
+Полезные ссылки:
+
+https://docs.angularjs.org/api/ng/directive/ngClass
+https://docs.angularjs.org/api/ng/directive/ngChange
+https://docs.angularjs.org/api/ngResource/service/$resource
+http://web2py.com/books/default/chapter/29/06/the-database-abstraction-layer#Shortcuts

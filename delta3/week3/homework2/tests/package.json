@@ -1,0 +1,7 @@
+{
+  "name": "todo-tests",
+  "version": "1.0.0",
+  "description": "Protractor tests for TODO app.",
+  "dependencies": {},
+  "devDependencies": {"request": "^2.53.0"}
+}
