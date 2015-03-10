@@ -48,6 +48,9 @@ void read_line(std::ifstream &input, std::queue<std::string> &lines)
 int main()
 {
 	std::ifstream input("input.txt");
+	if (!input) {
+		return -1;
+	}
 	unsigned result = 0;
 	std::queue<std::string> lines;
 	std::vector<std::thread> threads;
