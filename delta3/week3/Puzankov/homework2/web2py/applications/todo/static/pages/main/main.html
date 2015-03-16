@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <form ng-submit="add()">
+            <input ng-model="newTask" class="new-task form-control input-lg" ng-class="{first: tasks.length === 0}"
+                   type="text" placeholder="What needs to be done?">
+        </form>
+
+        <table class="tasks table table-hover">
+            <tr ng-repeat="task in tasks">
+                <td class="complete">
+                    <input ng-model="task.complete" type="checkbox">
+                </td>
+                <td class="title">
+                {{task.title}}
+                </td>
+                <td class="remove">
+                    <button ng-click="remove(task)" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>

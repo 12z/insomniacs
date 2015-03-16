@@ -1,0 +1,7 @@
+Go to http://nodejs.org/ and hit Install button.
+
+You might need to restart your user session after installing Node.js, 
+so that npm and webdriver-manager became available via the PATH environment variable.
+
+Besides, make sure http_proxy is properly set if needed, 
+so that Internet sites are available within the console when you set up and run test.
