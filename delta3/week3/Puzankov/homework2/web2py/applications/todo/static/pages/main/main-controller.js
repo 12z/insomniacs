@@ -1,6 +1,8 @@
 angular.module('todo')
     .controller('MainController', function ($scope, $resource) {
-        var Task = $resource('/todo/api/tasks/:id', {id: '@id'});
+        var Task = $resource('/todo/api/tasks/:id', {id: '@id'}, {
+            check : {method: 'PUT'}
+        });
 
         function refresh() {
             Task.query(function (tasks) {
@@ -24,6 +26,11 @@ angular.module('todo')
 
         $scope.remove = function (task) {
             task.$remove()
+                .then(refresh);
+        };
+
+        $scope.complete = function (task) {
+            task.$check()
                 .then(refresh);
         };
     });

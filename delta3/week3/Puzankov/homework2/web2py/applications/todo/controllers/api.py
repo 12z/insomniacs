@@ -16,6 +16,20 @@ def _create(task):
     return db.task.insert(title=task['title'])
 
 
+def _check():
+    task = simplejson.loads(request.body.read())
+
+    task_id = _update(task)
+
+    return _get(task_id)
+
+
+def _update(task):
+    print(task['title'], task['complete'])
+    row = db(db.task.title == task['title']).update(complete=task['complete'])
+    return row
+
+
 def _save():
     task = simplejson.loads(request.body.read())
 
@@ -30,7 +44,9 @@ def _delete():
 
 
 def tasks():
-    if request.env.request_method == 'POST':
+    if request.env.request_method == 'PUT':
+        return _check()
+    elif request.env.request_method == 'POST':
         return _save()
     elif request.env.request_method == 'DELETE':
         return _delete()

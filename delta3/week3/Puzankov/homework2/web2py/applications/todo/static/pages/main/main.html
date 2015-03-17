@@ -6,17 +6,17 @@
         </form>
 
         <table class="tasks table table-hover">
-            <tr ng-repeat="task in tasks">
-                <td class="complete">
-                    <input ng-model="task.complete" type="checkbox">
-                </td>
-                <td class="title">
-                {{task.title}}
-                </td>
-                <td class="remove">
-                    <button ng-click="remove(task)" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
+            <tr ng-repeat="task in tasks" ng-class="{success: task.complete}">
+                    <td class="complete">
+                        <input ng-model="task.complete" type="checkbox" ng-change="complete(task)">
+                    </td>
+                    <td class="title">
+                    {{task.title}}
+                    </td>
+                    <td class="remove">
+                        <button ng-click="remove(task)" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
                 </td>
             </tr>
         </table>
